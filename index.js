@@ -18,6 +18,14 @@ let spaces = Array(9).fill(null)//CREATES 9 EMPTY SPACES
  boxes.forEach(function(box){
     box.addEventListener("click", boxClicked)})
 }
+
+function isDraw() {
+    if (!playerHasWon() && spaces.every(space => space!== null)) {
+      return true;
+    }
+    return false;
+  }
+
 function boxClicked(e){
     const id = e.target.id
     if(!spaces[id] && !playerHasWon()){ // falsy values
@@ -43,17 +51,20 @@ if (currentPlayer === X_PLAYER){
     scoreO.textContent = playerOscore 
 }
 return;
-        }else{
-            playerText.textContent = `💭 Hmm!`
-        }
-        
-        if (currentPlayer === 'X' ) {
-            currentPlayer = 'O';
-          } else {
-            currentPlayer = 'X';
-          }
-    }
+} else if (isDraw()) {
+    playerText.textContent = `It's a DRAW!`;
+  } else {
+    playerText.textContent = `💭 Hmm!`;
+  }
+
+  if (currentPlayer === 'X') {
+    currentPlayer = 'O';
+  } else {
+    currentPlayer = 'X';
+  }
 }
+}
+
 const winningCombos = [
     [0,1,2],
     [3,4,5],
@@ -76,6 +87,7 @@ return false
 /*END OF PLAYER HAS WON FUNCTION*/
 //CREATING A RESTART BUTTON THAT CLEARS THE SPACE AND SETS THE BOX TO AN EMPTY STRING AND RESETS THE CURRENT PLAYER TO ITS DEFAULT(X_PLAYER)
 restartBtn.addEventListener("click", restart)
+
 function restart(){
     spaces.fill(null) //clears out the spaces 
     boxes.forEach(function(box){
