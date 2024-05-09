@@ -58,7 +58,8 @@ body{
     grid-template-columns: repeat(3, 100px);
     grid-gap:px;
     margin-top: 10px;
-    min-height: 75%;
+    margin-bottom: 20px;
+    min-height: 70%;
    
   }
   
