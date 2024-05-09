@@ -45,6 +45,8 @@ body{
     font-weight: bolder;
     display: flex;
     justify-content: center;
+    font-family: 'Finger Paint', cursive;
+    font-size: 24px;
 }
 #gameboard {
     display: flex;
