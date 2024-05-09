@@ -1,5 +1,4 @@
 html{
-    background-color: black;
     color: goldenrod;
     text-align: center;
     font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,6 +11,7 @@ body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
+    background-color: rgb(74, 73, 73);
 }
 
 
