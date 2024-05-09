@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 html{
-    color: goldenrod;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -8,19 +9,30 @@ body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
-    background-color: rgb(74, 73, 73);
+    background-image:url(high-resolution-wood-background-mc5m7on7t7ung98b.jpg);
 }
+#game{
+    font-weight: bold;
+    text-decoration:double underline;
+}
+<<<<<<< HEAD
 
 h2{
     color: rgb(30, 24, 9);
 }
+=======
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
 
 #player1,
 #player2{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+<<<<<<< HEAD
     background-color: grey;
+=======
+    background-color: #0c0c0c;
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
     position: relative;
     margin: 20px;
 }
@@ -29,12 +41,18 @@ h2{
 #player2::after{
     content: "";
     position: absolute;
-    top: 22px;
-    left: -10px;
+    top: 28px;
+    left: -9px;
     border-radius: 50% 50% 0% 0%;
+<<<<<<< HEAD
     background-color: grey;
     width: 40px;
     height: 20px;
+=======
+    background-color:  #121212;
+    width: 50px;
+    height: 30px;
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
 
 }
 
@@ -50,10 +68,18 @@ h2{
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, 100px);
+<<<<<<< HEAD
     grid-gap:1px;
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 75%;
+=======
+    grid-gap:px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: 70%;
+   
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
   }
   
 .box {
@@ -63,12 +89,18 @@ h2{
     border: 2px solid goldenrod;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
+<<<<<<< HEAD
     font-size: 75px;
     cursor: pointer;
     text-align: center;
     background-color: powderblue;
+=======
+    font-size: 60px;
+    cursor: pointer;
+    text-align: center;
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
     background-image: url('Backgroundimage.jpg');
-    color: rgb(10, 10, 10);
+    color: rgb(6, 6, 6);
     line-height: 100px;
     vertical-align: middle;
 }
@@ -77,14 +109,23 @@ button{
     width: 75%;
     width: 100px;
     display: flex;
+    position:absolute;
     justify-content: center;
-    margin: 20px auto  0 auto;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    font-weight: 700;
     box-sizing: border-box;
-    padding: 10px 10px;
+    font-family: "Sedan SC", serif;
+    font-style: normal;
+    padding: 19px 34px;
     border: none;
-    border-radius: 7px;
-    background-color: goldenrod;
+    border-radius: 20px;
+    background-color:transparent;
+    border:2px solid #121212;
     color: rgb(28, 21, 21);
+<<<<<<< HEAD
     font-weight: bold;
 }
 
@@ -96,3 +137,10 @@ button{
 #undo{
     background-color: rgb(139, 224, 196);
 }
+=======
+  }
+  button:hover{
+    background-color:goldenrod;
+    border: none;
+  }
+>>>>>>> a3c5656eda6e2b34bdc99ac94e0da861a54ef13c
