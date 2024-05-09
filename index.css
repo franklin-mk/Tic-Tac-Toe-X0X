@@ -12,9 +12,25 @@ body{
     box-sizing: border-box;
 }
 
-a {
+a{
     text-decoration: none; 
+    color: aliceblue;
 }
+
+.bodyCenter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#startBTN{
+    padding: 1rem 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
 #player1,
 #player2{
     width: 20px;
@@ -38,9 +54,10 @@ a {
 }
 
 .player{
-    color: white;
+    color: black;
     font-weight: bolder;
-    display: flex;
+    display: inline-flex;
+    gap: 200px;
     justify-content: space-evenly;
 }
 
