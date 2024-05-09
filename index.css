@@ -1,29 +1,30 @@
 html{
     color: goldenrod;
     text-align: center;
-    font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-    
-
 body{
-    --WINNING-BLOCKS: rgba(128, 128, 128, 0.473);
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
     background-color: rgb(74, 73, 73);
 }
 
+h2{
+    color: rgb(30, 24, 9);
+}
 
 #player1,
 #player2{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #bababa;
+    background-color: grey;
     position: relative;
     margin: 20px;
 }
+
 #player1::after,
 #player2::after{
     content: "";
@@ -31,7 +32,7 @@ body{
     top: 22px;
     left: -10px;
     border-radius: 50% 50% 0% 0%;
-    background-color:  #bababa;
+    background-color: grey;
     width: 40px;
     height: 20px;
 
@@ -40,46 +41,39 @@ body{
 .player{
     color: white;
     font-weight: bolder;
-    display: flex;
+    display: inline-flex;
+    gap: 200px;
     justify-content: space-evenly;
-}
-
-.score{
-    color: goldenrod;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
 }
 
 #gameboard {
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, 100px);
-    grid-gap:px;
+    grid-gap:1px;
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 75%;
-   
   }
   
-  .box {
-    margin-top: px;
+.box {
+    margin-top: 1px;
     width: 100px;
     height: 100px;
     border: 2px solid goldenrod;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    font-size: 50px;
+    font-size: 75px;
     cursor: pointer;
     text-align: center;
-     background-color: powderblue; 
+    background-color: powderblue;
     background-image: url('Backgroundimage.jpg');
     color: rgb(10, 10, 10);
     line-height: 100px;
     vertical-align: middle;
-  }
+}
 
-  button{
+button{
     width: 75%;
     width: 100px;
     display: flex;
@@ -91,5 +85,14 @@ body{
     border-radius: 7px;
     background-color: goldenrod;
     color: rgb(28, 21, 21);
-    font-weight:bold
-  }
+    font-weight: bold;
+}
+
+.moveBtn{
+    display: inline-flex;
+    gap: 100px;
+}
+
+#undo{
+    background-color: rgb(139, 224, 196);
+}
