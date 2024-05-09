@@ -85,4 +85,3 @@ function restart(){
             currentPlayer = X_PLAYER
 }
 startGame()
-
