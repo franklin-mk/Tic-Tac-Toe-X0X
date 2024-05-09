@@ -1,98 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 html{
-    color: goldenrod;
+    color: rgb(0, 0, 0);
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  body{
+    font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
-    background-color: rgb(74, 73, 73);
-  }
-  
-  h2{
-    color: rgb(30, 24, 9);
-  }
-  
-  #player1,
-  #player2{
-    width: 20px;
-    height: 20px;
+    background-image:url(high-resolution-wood-background-mc5m7on7t7ung98b.jpg);
+}
+#game{
+    font-weight: bold;
+    text-decoration:double underline;
+}
+#player1,
+#player2{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: #0c0c0c;
     position: relative;
     margin: 20px;
-  }
-  
-  #player1::after,
-  #player2::after{
+}
+#player1::after,
+#player2::after{
     content: "";
     position: absolute;
-    top: 22px;
-    left: -10px;
+    top: 28px;
+    left: -9px;
     border-radius: 50% 50% 0% 0%;
-    background-color: grey;
-    width: 40px;
-    height: 20px;
-  
-  }
-  
-  .player{
+    background-color:  #121212;
+    width: 50px;
+    height: 30px;
+}
+.player{
     color: white;
     font-weight: bolder;
-    display: inline-flex;
-    gap: 200px;
+    display: flex;
     justify-content: space-evenly;
-  }
-  
-  #gameboard {
+}
+.score{
+    color: goldenrod;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+#gameboard {
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, 100px);
-    grid-gap:1px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    grid-gap:px;
+    margin-top: 10px;
     min-height: 75%;
+    margin-bottom: 20px;
+    min-height: 70%;
+
   }
-  
+
   .box {
-    margin-top: 1px;
+    margin-top: px;
     width: 100px;
     height: 100px;
     border: 2px solid goldenrod;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    font-size: 75px;
+    font-size: 60px;
     cursor: pointer;
     text-align: center;
-    background-color: powderblue;
     background-image: url('Backgroundimage.jpg');
-    color: rgb(10, 10, 10);
+    color: rgb(6, 6, 6);
     line-height: 100px;
     vertical-align: middle;
   }
-  
   button{
     width: 75%;
     width: 100px;
     display: flex;
+    position:absolute;
     justify-content: center;
-    margin: 20px auto  0 auto;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    font-weight: 700;
     box-sizing: border-box;
-    padding: 10px 10px;
+    font-family: "Sedan SC", serif;
+    font-style: normal;
+    padding: 19px 34px;
     border: none;
-    border-radius: 7px;
-    background-color: goldenrod;
+    border-radius: 20px;
+    background-color:transparent;
+    border:2px solid #121212;
     color: rgb(28, 21, 21);
-    font-weight: bold;
   }
-  
-  .moveBtn{
-    display: inline-flex;
-    gap: 100px;
-  }
-  
-  #undo{
-    background-color: rgb(139, 224, 196);
+  button:hover{
+    background-color:goldenrod;
+    border: none;
   }
