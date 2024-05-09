@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 html{
     color: rgb(0, 0, 0);
     text-align: center;
@@ -87,11 +88,18 @@ body{
     left: 70%;
     transform: translate(-50%,-50%);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     box-sizing: border-box;
-    padding: 15px 30px;
+    font-family: "Sedan SC", serif;
+    font-style: normal;
+    padding: 19px 34px;
     border: none;
     border-radius: 20px;
-    background-color: goldenrod;
+    background-color:transparent;
+    border:2px solid #121212;
     color: rgb(28, 21, 21);
+  }
+  button:hover{
+    background-color:goldenrod;
+    border: none;
   }
