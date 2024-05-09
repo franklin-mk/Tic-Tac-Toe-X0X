@@ -1,9 +1,13 @@
 let boxes = Array.from(document.getElementsByClassName("box"))  //Array.from tells it to create an array from an array like object
 let restartBtn = document.getElementById("restartBtn")
 let playerText = document.getElementById("playerText")
+let scoreX = document.getElementById("scoreX")
+let scoreO = document.getElementById("scoreO")
 
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS') 
 
+let playerXscore = 0
+let playerOscore = 0
 const O_PLAYER = "O"
 const X_PLAYER = "X"
 let currentPlayer = X_PLAYER
@@ -35,7 +39,13 @@ function boxClicked(e){
       
   }
 }
-
+if (currentPlayer === X_PLAYER){
+    playerXscore += 1;
+    scoreX.textContent = playerXscore
+}else{
+    playerOscore += 1;
+    scoreO.textContent = playerOscore 
+}
 return;
         }else{
             playerText.textContent = `💭 Hmm!`
