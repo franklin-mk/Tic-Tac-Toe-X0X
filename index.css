@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 html{
-    color: rgb(0, 0, 0);
+    background-color: black;
+    color: goldenrod;
     text-align: center;
     font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
-    background-image:url(high-resolution-wood-background-mc5m7on7t7ung98b.jpg);
 }
-#game{
-    font-weight: bold;
-    text-decoration:double underline;
+
+a {
+    text-decoration: none; 
 }
 #player1,
 #player2{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: #0c0c0c;
+    background-color: #bababa;
     position: relative;
     margin: 20px;
 }
@@ -27,37 +28,40 @@ body{
 #player2::after{
     content: "";
     position: absolute;
-    top: 28px;
-    left: -9px;
+    top: 22px;
+    left: -10px;
     border-radius: 50% 50% 0% 0%;
-    background-color:  #121212;
-    width: 50px;
-    height: 30px;
+    background-color:  #bababa;
+    width: 40px;
+    height: 20px;
+
 }
+
 .player{
     color: white;
     font-weight: bolder;
     display: flex;
     justify-content: space-evenly;
 }
+
 .score{
     color: goldenrod;
     font-weight: bolder;
     display: flex;
     justify-content: center;
 }
+
 #gameboard {
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, 100px);
     grid-gap:px;
-    margin-top: 10px;
-    min-height: 75%;
+    margin-top: 20px;
     margin-bottom: 20px;
-    min-height: 70%;
-
+    min-height: 75%;
+   
   }
-
+  
   .box {
     margin-top: px;
     width: 100px;
@@ -65,36 +69,26 @@ body{
     border: 2px solid goldenrod;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    font-size: 60px;
+    font-size: 50px;
     cursor: pointer;
     text-align: center;
+     background-color: powderblue; 
     background-image: url('Backgroundimage.jpg');
-    color: rgb(6, 6, 6);
+    color: rgb(10, 10, 10);
     line-height: 100px;
     vertical-align: middle;
   }
+
   button{
     width: 75%;
     width: 100px;
     display: flex;
-    position:absolute;
     justify-content: center;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%,-50%);
-    font-size: 15px;
-    font-weight: 700;
+    margin: 20px auto  0 auto;
     box-sizing: border-box;
-    font-family: "Sedan SC", serif;
-    font-style: normal;
-    padding: 19px 34px;
+    padding: 10px 10px;
     border: none;
-    border-radius: 20px;
-    background-color:transparent;
-    border:2px solid #121212;
+    border-radius: 7px;
+    background-color: goldenrod;
     color: rgb(28, 21, 21);
-  }
-  button:hover{
-    background-color:goldenrod;
-    border: none;
   }
