@@ -82,7 +82,7 @@ function restart(){
         box.innerText = ''
         box.style.backgroundColor =''
             })
-            playerText.textContent = "Tic Tac Toe"
+            playerText.textContent = ""
             currentPlayer = X_PLAYER
 }
 startGame()
