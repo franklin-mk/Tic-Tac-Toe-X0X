@@ -1,26 +1,27 @@
 html{
-    color: goldenrod;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-    
-
 body{
-    --WINNING-BLOCKS: rgba(128, 128, 128, 0.473);
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
-    background-color: rgb(74, 73, 73);
+    background-image:url(high-resolution-wood-background-mc5m7on7t7ung98b.jpg);
 }
-
+#game{
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration:double underline;
+}
 
 #player1,
 #player2{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: #bababa;
+    background-color: #0c0c0c;
     position: relative;
     margin: 20px;
 }
@@ -28,12 +29,12 @@ body{
 #player2::after{
     content: "";
     position: absolute;
-    top: 22px;
-    left: -10px;
+    top: 28px;
+    left: -9px;
     border-radius: 50% 50% 0% 0%;
-    background-color:  #bababa;
-    width: 40px;
-    height: 20px;
+    background-color:  #121212;
+    width: 50px;
+    height: 30px;
 
 }
 
@@ -69,12 +70,11 @@ body{
     border: 2px solid goldenrod;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    font-size: 50px;
+    font-size: 60px;
     cursor: pointer;
     text-align: center;
-     background-color: powderblue; 
     background-image: url('Backgroundimage.jpg');
-    color: rgb(10, 10, 10);
+    color: rgb(6, 6, 6);
     line-height: 100px;
     vertical-align: middle;
   }
@@ -85,11 +85,12 @@ body{
     display: flex;
     justify-content: center;
     margin: 20px auto  0 auto;
+    font-size: 15px;
+    font-weight: 600;
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 7px;
+    border-radius: 20px;
     background-color: goldenrod;
     color: rgb(28, 21, 21);
-    font-weight:bold
   }
