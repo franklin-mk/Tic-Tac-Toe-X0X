@@ -2,8 +2,7 @@ let boxes = Array.from(document.getElementsByClassName("box"))  //Array.from tel
 let restartBtn = document.getElementById("restartBtn")
 let playerText = document.getElementById("playerText")
 
-let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS')
-
+let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS') 
 
 const O_PLAYER = "O"
 const X_PLAYER = "X"

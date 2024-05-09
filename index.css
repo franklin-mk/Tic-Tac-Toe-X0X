@@ -5,7 +5,10 @@ html{
     font-family: Sedan sc, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+    
+
 body{
+    --WINNING-BLOCKS: rgba(128, 128, 128, 0.473);
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
