@@ -21,7 +21,7 @@ let spaces = Array(9).fill(null)//CREATES 9 EMPTY SPACES
 function boxClicked(e){
     const id = e.target.id
 
-    if(!spaces[id] ){ // falsy values
+    if(!spaces[id] && !playerHasWon()){ // falsy values
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
 
