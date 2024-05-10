@@ -12,24 +12,23 @@ body{
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none; 
-    color: aliceblue;
 }
 
-.bodyCenter{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.homePage {
+    background-image: url('Tic\ Tac\ Toe.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 
-#startBTN{
-    padding: 1rem 4rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-wrap: nowrap;
-}
+ #startBTN {
+    margin-top: 30%;
+    background-color: black;
+    color: rgb(246, 225, 171);
+    animation
+} 
 
 #player1,
 #player2{
@@ -54,10 +53,9 @@ a{
 }
 
 .player{
-    color: black;
+    color: white;
     font-weight: bolder;
-    display: inline-flex;
-    gap: 200px;
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -66,8 +64,6 @@ a{
     font-weight: bolder;
     display: flex;
     justify-content: center;
-    font-family: 'Finger Paint', cursive;
-    font-size: 24px;
 }
 
 #gameboard {
