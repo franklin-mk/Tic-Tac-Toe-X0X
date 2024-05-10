@@ -8,15 +8,15 @@ html{
 }
 
 body{
-    margin: 5px 5px;
-    padding: 5px;
+    margin: 0px 5px;
+    padding: 4px;
     box-sizing: border-box;
     text-wrap: nowrap;
 }
 
 a {
     text-decoration: none;
-    color: purple;
+    color: black;
     font-weight: bolder;
     font-size: x-large;
     text-wrap: nowrap;
@@ -30,7 +30,10 @@ a {
 }
 
 #backToHome {
-    margin-left: 90%;
+    left: 0;
+    position: absolute;
+    padding-left: 4px;
+    margin-top: 0;
 }
 
 .bodyCenter{
@@ -46,6 +49,11 @@ a {
     font-weight: bold;
     text-wrap: nowrap;
 } 
+
+#startBTN:hover {
+    background-color: #bababa;
+    transform: translateY(-5px);
+}
 
 #player1,
 #player2{
