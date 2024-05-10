@@ -11,7 +11,6 @@ body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
-    text-wrap: nowrap;
 }
 
 a {
@@ -27,15 +26,8 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
-
 }
 
-<<<<<<< HEAD
- #startBTN {
-    margin-top: 30%;
-    background-color: black;
-    color: rgb(246, 225, 171);
-=======
 .bodyCenter{
     position: fixed;
     top: 50%;
@@ -48,12 +40,7 @@ a {
     font-size: 1rem;
     font-weight: bold;
     text-wrap: nowrap;
->>>>>>> 1ac5ad7f15c5aac088988034a467cd316f4de424
 } 
-
-#backToHome {
-    margin-left: 90%;
-}
 
 #player1,
 #player2{
