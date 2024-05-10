@@ -72,25 +72,26 @@ a {
 .player{
     color: black;
     font-weight: bolder;
-    display: inline-flex;
-    gap: 200px;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 450px; 
+    margin: 0 auto;
 }
 
-.score{
+.player .score {
     color: goldenrod;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     font-family: 'Finger Paint', cursive;
-    font-size: 24px;
+    font-size: 2rem;
 }
 
 #gameboard {
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(3, 100px);
-    grid-gap:px;
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 75%;
@@ -105,7 +106,7 @@ a {
     font-size: 50px;
     cursor: pointer;
     text-align: center;
-     background-color: powderblue; 
+    background-color: powderblue; 
     background-image: url('Backgroundimage.jpg');
     color: rgb(10, 10, 10);
     line-height: 100px;
