@@ -3,6 +3,7 @@ let restartBtn = document.getElementById("restartBtn")
 let playerText = document.getElementById("playerText")
 let scoreX = document.getElementById("scoreX")
 let scoreO = document.getElementById("scoreO")
+let playerTurnIndicator = document.getElementById("playerTurn");
 
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS') 
 
@@ -11,11 +12,13 @@ let playerOscore = 0
 const O_PLAYER = "O"
 const X_PLAYER = "X"
 let currentPlayer = X_PLAYER
+
 //KEEPS TRACK OF WHICH BLOCK WAS CLICKED TO PREVENT O FROM OVERWRITING X
-let spaces = Array(9).fill(null)//CREATES 9 EMPTY SPACES
+let spaces = Array(9).fill(null) //CREATES 9 EMPTY SPACES
+
 //ADD AN EVENT LISTENER TO EACH OF OUR ID'S
-  function startGame  (){
- boxes.forEach(function(box){
+function startGame  (){
+  boxes.forEach(function(box){
     box.addEventListener("click", boxClicked)})
 }
 
@@ -31,9 +34,10 @@ function boxClicked(e){
     if(!spaces[id] && !playerHasWon()){ // falsy values
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
+        
          /*CALLING PLAYER HAS WON FUNCTION*/
         if(playerHasWon() ){
-            playerText.textContent = `${currentPlayer} has WON!`
+            playerText.textContent = `${currentPlayer} WINS!`
             let winning_blocks = playerHasWon();
      if (winning_blocks) {
        for (let i = 0; i < winning_blocks.length; i++) {
@@ -46,22 +50,24 @@ function boxClicked(e){
 if (currentPlayer === X_PLAYER){
     playerXscore += 1;
     scoreX.textContent = playerXscore
-}else{
+} else {
     playerOscore += 1;
     scoreO.textContent = playerOscore 
 }
 return;
 } else if (isDraw()) {
-    playerText.textContent = `It's a DRAW!`;
+    playerText.textContent = `DRAW!`; 
+    return playerTurnIndicator.innerHTML= "Restart";
   } else {
     playerText.textContent = `💭 Hmm!`;
-  }
+  } 
 
   if (currentPlayer === 'X') {
     currentPlayer = 'O';
   } else {
     currentPlayer = 'X';
   }
+  playerTurnIndicator.innerHTML= `Player ${currentPlayer} turn!`;
 }
 }
 
@@ -75,15 +81,17 @@ const winningCombos = [
     [0,4,8],
     [2,4,6]
 ]
+
 function playerHasWon(){
 for (const condition of winningCombos) { //ITERATION OF OBJECT WINNING COMBOS
     let [a, b, c] = condition
     if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c]) ){
         return[a,b,c] //CHECKS WHETHER ALL THREE SPACES ARE OCCUPIED BY SAME PLAYER
-    }
+    } playerTurnIndicator.innerHTML= ``
 }
 return false
 }
+
 /*END OF PLAYER HAS WON FUNCTION*/
 //CREATING A RESTART BUTTON THAT CLEARS THE SPACE AND SETS THE BOX TO AN EMPTY STRING AND RESETS THE CURRENT PLAYER TO ITS DEFAULT(X_PLAYER)
 restartBtn.addEventListener("click", restart)
@@ -96,8 +104,11 @@ function restart(){
             })
             playerText.textContent = ""
             currentPlayer = X_PLAYER
+            playerTurnIndicator.innerHTML= `Player ${currentPlayer} turn!`
 }
+
 startGame()
+
 /* 1.contains an array of elements which we gave the class box which rep the   9  squares.
 2.Has the restart button
 3.Has the playerText which contains the current player or winner.
