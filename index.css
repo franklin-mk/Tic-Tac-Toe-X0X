@@ -11,6 +11,7 @@ body{
     margin: 5px 5px;
     padding: 5px;
     box-sizing: border-box;
+    text-wrap: nowrap;
 }
 
 a {
