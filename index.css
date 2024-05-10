@@ -30,9 +30,9 @@ a {
 }
 
 #backToHome {
-    left: 0;
+    right: 0;
     position: absolute;
-    padding-left: 4px;
+    padding-right: 4px;
     margin-top: 0;
 }
 
