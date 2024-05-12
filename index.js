@@ -5,7 +5,7 @@ let scoreX = document.getElementById("scoreX")
 let scoreO = document.getElementById("scoreO")
 let playerTurnIndicator = document.getElementById("playerTurn");
 
-let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS') 
+let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--WINNING-BLOCKS')
 
 let playerXscore = 0
 let playerOscore = 0
